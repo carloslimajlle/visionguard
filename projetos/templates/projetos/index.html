@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% load staticfiles %}
+
+{% block title %} Projetos {% endblock title %}
+
+{% block stylesheets %}
+
+  {{ block.super }}
+
+{% endblock stylesheets %}
+
+{% block content %}
+  <div class="right_col" role="main">
+    <div class="">
+      <div class="page-title">
+        <div class="title_left">
+          <h3>Projetos</h3>
+        </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row">
+	  
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">            
+
+            <div class="x_content">
+              <a href={% url 'projetos:add' %}>
+              <button class="btn btn-primary">Adicionar</button>
+              </a>
+              
+              <div class="table-responsive">
+                <table class="table table-striped jambo_table bulk_action">
+                  <thead>
+                    <tr class="headings">
+                      <th class="column-title">Nome do Projeto </th>
+                      <th class="column-title">Data Início </th>
+                      <th class="column-title">Data Fim </th>
+                      <th class="column-title">%Completo </th>
+                      <th class="column-title">Atrasado </th>
+                      <th class="column-title no-link last"><span class="nobr">#</span>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+				    {% for projeto in projetosList %}
+                    <tr class="even pointer">
+                      <td class=" "><a href={% url 'projetos:index' %}>{{ projeto.nome_projeto }}</a></td>
+                      <td class=" ">{{ projeto.data_inicio }}</td>
+                      <td class=" ">{{ projeto.data_fim }}</td>
+                      <td class=" ">{{ projeto.completo }}</td>
+                      <td class=" ">{{ projeto.atrasado }}</td>
+                      <td> <a href={% url 'projetos:remove' id=projeto.id %}>Remover</a> </td>
+                    </tr>
+					  {% endfor %}		
+                  </tbody>
+                </table>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+
+  {{ block.super}}  
+
+{% endblock javascripts %}
