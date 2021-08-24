@@ -19,23 +19,23 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ### Configuração
 
-# Abra o terminal e execute o comando
+Abra o terminal e execute o comando
 $ pip install virtualenv
 
-# Acesse a pasta do projeto no terminal e execute o comando
+Acesse a pasta do projeto no terminal e execute o comando
 $ virtualenv venv
 
-# Criando ambiente de dev. Execute o comando dentro da pasta do projeto
+Criando ambiente de dev. Execute o comando dentro da pasta do projeto
 
 $ .\\venv\Scripts\activate.bat
 
-# Instale as dependências
+Instale as dependências
 
 $ pip install -r requiriments.txt
 
 ### Rodando a aplicação
 
-# Dentro da pasta do projeto execute
+Dentro da pasta do projeto execute
 
 $ manage.py runserver
 
