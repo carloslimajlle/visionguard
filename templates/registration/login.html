@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} Login {% endblock title %}
+
+{% block stylesheets %}
+  {{ block.super }}
+  <!-- Animate.css -->
+  <link href="{% static 'vendors/animate.css/animate.min.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block body_class %}login{% endblock body_class %}
+
+{% block body %}
+  <div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+      <div class="animate form login_form">
+        <section class="login_content">
+
+          {% if form.errors %}
+
+          {% if form.username.errors.as_text %}
+            <div class="alert alert-danger" role="alert">
+              <strong>Email</strong> é um campo obrigatório
+            </div>
+
+          {% elif form.password.errors.as_text %}
+            <div class="alert alert-danger" role="alert">
+              <strong>Senha</strong> é um campo obrigatório
+            </div>
+
+          {% else %}
+            <div class="alert alert-danger" role="alert">
+              Usuário ou Senha está incorreto!
+            </div> 
+            
+          {% endif %}  
+          
+          {% endif %}
+            
+
+          <form id="login-form" method="post">
+            {% csrf_token %}
+            <h1>VisionGuard</h1>
+            <div>
+              <input type="text" name="username" class="form-control" placeholder="Digite seu email"/>
+            </div>
+            <div>
+              <input type="password" name="password" class="form-control" placeholder="Digite sua senha"/>
+            </div>
+            <div>
+              <button class="btn btn-default submit" type="submit">ENTRAR</button>
+              
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="separator">
+              
+              <div class="clearfix"></div>
+              <br />
+
+              <div>
+                <p>©2021 Todos os Direitos Reservados.</p>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+    </div>
+  </div>
+{% endblock body %}
+
