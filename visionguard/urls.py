@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls', 'home')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('projetos/', include('projetos.urls', 'projetos')),
+    path('atividades/', include('atividades.urls', 'atividades')),
 ]
 
 handler404 = 'views.handler404' 
