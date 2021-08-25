@@ -41,4 +41,7 @@ $ manage.py runserver
 
 ### Acessando
 
-[https://192.168.0.1/visionguard](https://192.168.0.1/)
+[http://143.198.97.17](http://143.198.97.17)
+
+usuário: projetos@grupoeuax.com.br
+senha: 123456
