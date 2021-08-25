@@ -43,5 +43,5 @@ $ manage.py runserver
 
 [http://143.198.97.17](http://143.198.97.17)
 
-usuário: projetos@grupoeuax.com.br
-senha: 123456
+* usuário: projetos@grupoeuax.com.br
+* senha: 123456
