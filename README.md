@@ -41,7 +41,7 @@ $ manage.py runserver
 
 ### Acessando
 
-[http://143.198.97.17](http://143.198.97.17)
+[http://143.198.97.17](http://143.198.97.17) Desativado
 
 * usuário: projetos@grupoeuax.com.br
 * senha: 123456
